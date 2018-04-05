@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+screenshots
+
+#vim
+*.swn
+*.swo
+*.swp
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+/static/build
+/build
+/dist
+/output
+node_modules
+app/node_modules
+
+#webpack build
+static/webpackbuild/*
+app/server/componentStyle-bundle.js
+
+/views/*
+!/views/mainHTML.html
+!/views/errorPage.njk
+!/views/downloadIframe.njk
+._.DS_Store
+.DS_Store
+.idea
+.prettierrc
+
+
+#site map
+siteMap/sitemaps
+siteMap/packageid_list
+siteMap/cloudtrans_scp/data
+siteMap/cloudtrans_scp/log
+
+[core]
+    filemode = false
