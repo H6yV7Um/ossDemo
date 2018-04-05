@@ -1,6 +1,6 @@
 # activity
 
-> A Vue.js project
+> A ossDemo project
 
 ## Build Setup
 
