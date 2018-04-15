@@ -4,7 +4,7 @@
   "description": "Appsearch Activity",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node build/dev-server.js",
+    "dev-base": "cross-env NODE_ENV=development node build/dev-server.js",
     "dll": "webpack --config ./build/webpack.dll.config.js",
     "beta": "cross-env NODE_ENV=production RUN_ENV=beta node build/dev-server.js",
     "beta:run": "cross-env NODE_ENV=production node build/dev-server.js",
@@ -12,8 +12,8 @@
     "publish": "sh build.sh && sh rsync.sh",
     "output": "sh build.sh",
     "babel": "NODE_ENV=production babel app --ignore node_modules --out-dir dist/app/",
-    "server-dev": "NODE_ENV=development DEBUG=as*,-as-*-verbose nodemon ./app/app.js --config nodemon.json --exec babel-node",
-    "server-pro": "NODE_ENV=production DEBUG=as*,-as-*-verbose nodemon ./app/app.js --config nodemon.json --exec babel-node"
+    "dev": "NODE_ENV=development DEBUG=as*,-as-*-verbose nodemon ./app/app.js --config nodemon.json --exec babel-node",
+    "pro": "NODE_ENV=production DEBUG=as*,-as-*-verbose nodemon ./app/app.js --config nodemon.json --exec babel-node"
   },
   "dependencies": {
     "autoprefixer": "6.5.1",

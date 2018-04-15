@@ -35,32 +35,32 @@
 <script>
 
   export default {
-    mounted: function() {
-    },
-    data () {
-      return {
-        innerShow: false
+      name: 'modal',
+      mounted: function () {
+      },
+      data() {
+          return {
+              innerShow: false
+          };
+      },
+      computed: {},
+      props: {
+          value: {},
+          autoClose: {
+              type: Boolean,
+              default: true
+          }
+      },
+      methods: {
+          close() {
+              if (!this.autoClose) {return;}
+              this.$emit('input', false);
+          }
       }
-    },
-    computed: {},
-    props: {
-      value: {},
-      autoClose: {
-        type: Boolean,
-        default: true
-      }
-    },
-    methods: {
-      close () {
-        if(!this.autoClose){return}
-        this.$emit('input', false);
-      }
-    }
-  }
+  };
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  @import '../assets/fonts/iconfont.css';
   .modal {
     transition: all .3s ease;
     color: #323232;
